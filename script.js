@@ -1,6 +1,7 @@
 const key = '5447ec87b6720e6526b7eb0de2f2e75a';
 const formEl = document.querySelector('form');
 const details = document.querySelector('.details');
+const searchBtn = document.querySelector('#search-btn');
 
 formEl.addEventListener('submit', (e) =>{
     e.preventDefault();
@@ -29,7 +30,7 @@ async function fetchAPI(location){
     const data = await res.json();
     console.log(data);
     return data;
-    
+
 }
 
 function generateHTMl(data){
@@ -51,3 +52,8 @@ function generateHTMl(data){
     `;
     details.innerHTML = html;
 }
+//add even handler for search button
+searchBtn.addEventListener('click', function(){
+    const searchByClick = document.querySelector('#search-btn');
+    fetchAPI(searchByClick.value);
+})

@@ -18,8 +18,8 @@ section{
 }
 .container{
     width: 50%;
-    max-width: 400px;
-    height: 500px;
+    max-width: 600px;
+    height: 700px;
     border-radius: 5px;
     background-color: cadetblue;
     position: relative;
@@ -112,4 +112,13 @@ form input::placeholder{
     margin: 10px 0;
     font-size: 25px;
     color: rgb(185, 189, 189);
+}
+.query{
+    color:white;
+    font-size: 15px;
+    margin: 10px 0;
+}
+.details img{
+    margin: 10px 0;
+    padding: 10px;
 }

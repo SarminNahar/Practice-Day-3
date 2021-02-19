@@ -27,13 +27,13 @@ async function fetchAPI(location){
     //https is secure but http is not secure in many case and in a live site  it will brake hole application.
     // to fixed it i use a url (https://cors-anywhere.herokuapp.com) before base api url.and don't need to do anything else.
     // now it is secure for live site.
-    const baseURL =`https://cors-anywhere.herokuapp.com/http://api.weatherstack.com/current?access_key=${key}&query=${location}`;
+    const baseURL =`http://api.weatherstack.com/current?access_key=${key}&query=${location}`;
+    // const baseURL =`https://cors-anywhere.herokuapp.com/http://api.weatherstack.com/current?access_key=${key}&query=${location}`;
     // const baseURL =`http://api.weatherstack.com/current?access_key=5447ec87b6720e6526b7eb0de2f2e75a&query=${location}`;
     const res = await fetch(baseURL);
     const data = await res.json();
     console.log(data);
     return data;
-
 }
 
 function generateHTMl(data){
